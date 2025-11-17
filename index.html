@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOH inventory system</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-base: 15 23 42;
+        --color-surface: 30 41 59;
+        --color-primary: 34 197 94;
+        --color-primary-hover: 74 222 128;
+        --color-secondary: 51 65 85;
+        --color-subtle: 100 116 139;
+        --color-text-main: 226 232 240;
+        --color-text-secondary: 148 163 184;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'base': 'rgb(var(--color-base) / <alpha-value>)',
+              'surface': 'rgb(var(--color-surface) / <alpha-value>)',
+              'primary': 'rgb(var(--color-primary) / <alpha-value>)',
+              'primary-hover': 'rgb(var(--color-primary-hover) / <alpha-value>)',
+              'secondary': 'rgb(var(--color-secondary) / <alpha-value>)',
+              'subtle': 'rgb(var(--color-subtle) / <alpha-value>)',
+              'text-main': 'rgb(var(--color-text-main) / <alpha-value>)',
+              'text-secondary': 'rgb(var(--color-text-secondary) / <alpha-value>)',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-base text-text-main">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf-autotable@latest/dist/jspdf.plugin.autotable.js"></script>
+  </body>
+</html>
